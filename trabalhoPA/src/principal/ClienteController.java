@@ -81,6 +81,7 @@ public class ClienteController {
     			clienteDAO.alterar(cliente);
     		}else {
     			clienteDAO.inserir(cliente);
+    			codigo = cliente.getCodigo();
     		}
     		novoCliente();
     		tblCliente.refresh();
