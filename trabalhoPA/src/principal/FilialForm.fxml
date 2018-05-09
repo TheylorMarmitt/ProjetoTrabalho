@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.FilialController">
+   <children>
+      <AnchorPane fx:id="acPrincipal" layoutX="-104.0" layoutY="-131.0" prefHeight="600.0" prefWidth="838.0">
+         <children>
+            <Label layoutX="192.0" layoutY="170.0" text="Nome: " />
+            <Label layoutX="192.0" layoutY="211.0" prefHeight="17.0" prefWidth="39.0" text="CNPJ:" />
+            <Label layoutX="183.0" layoutY="245.0" text="Cidade:" />
+            <TextField fx:id="tfNome" layoutX="236.0" layoutY="165.0" prefHeight="27.0" prefWidth="292.0" />
+            <TextField fx:id="tfCNPJ" layoutX="238.0" layoutY="206.0" prefHeight="27.0" prefWidth="172.0" />
+            <TextField fx:id="tfCidade" layoutX="235.0" layoutY="240.0" prefHeight="27.0" prefWidth="344.0" />
+            <Button fx:id="btnSalvar" layoutX="240.0" layoutY="358.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+            <Button fx:id="btnNovo" layoutX="313.0" layoutY="358.0" mnemonicParsing="false" onAction="#novo" text="Novo" />
+            <Button fx:id="btnExcluir" layoutX="382.0" layoutY="358.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
+            <TableView fx:id="tblCliente" layoutX="126.0" layoutY="398.0" onMouseClicked="#selecionaCliente" prefHeight="191.0" prefWidth="710.0">
+               <columns>
+                  <TableColumn fx:id="tbcCodigo" prefWidth="109.21310424804688" text="Codigo" />
+                  <TableColumn fx:id="tbcNome" prefWidth="226.0" text="Nome" />
+                  <TableColumn fx:id="tbcDataCadastro" prefWidth="146.0" text="UF" />
+                  <TableColumn prefWidth="227.0" text="Cidade" />
+               </columns>
+            </TableView>
+            <Label layoutX="189.0" layoutY="139.0" text="Codigo:" />
+            <TextField fx:id="tfCodigo" layoutX="239.0" layoutY="135.0" />
+            <Label layoutX="203.0" layoutY="280.0" text="UF:" />
+            <TextField fx:id="tfUf" layoutX="235.0" layoutY="275.0" prefHeight="27.0" prefWidth="344.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
