@@ -28,9 +28,8 @@ public class Cliente implements Serializable {
 	private LocalDate dataDeCadastro;
 	private String cnh;
 	
-	private long idade;
-	
 	public Integer idadeDoCliente() {		
+		long idade;
 		idade = ChronoUnit.YEARS.between(dataNascimento, LocalDate.now());
 		return (int) idade;
 	}
