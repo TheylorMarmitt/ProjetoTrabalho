@@ -6,65 +6,27 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
 public class MenuController {
 
-	  @FXML
-	  private BorderPane bpPrincipal;
-	  
     @FXML
-    private Button btnAlugar;
+    private BorderPane bpPrincipal;
 
     @FXML
-    private MenuButton mnCadastrar;
+    private Button btnAdicionarFilial;
 
     @FXML
-    private MenuItem mniCarro;
-
-    @FXML
-    private MenuItem mniCliente;
-
-    @FXML
-    private MenuItem mniFilial;
-
-    @FXML
-    private MenuItem mniVendedor;
-
-    @FXML
-    void alugar(ActionEvent event) {
-    	
-    }
-
-    @FXML
-    void cadastroCarro(ActionEvent event) {
+    void cadastrarFilial(ActionEvent event) {
     	FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("Carro.fxml"));
+		loader.setLocation(getClass().getResource("FilialForm.fxml"));
 		try {
-			BorderPane cursoView = (BorderPane) loader.load();
+			AnchorPane cursoView = (AnchorPane) loader.load();
 			bpPrincipal.setCenter(cursoView);
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
     }
 
-    @FXML
-    void cadastroCliente(ActionEvent event) {
-
-    }
-
-    @FXML
-    void cadastroFilial(ActionEvent event) {
-
-    }
-
-    @FXML
-    void cadastroVendedor(ActionEvent event) {
-
-    }
 }
-
-
