@@ -15,10 +15,7 @@ import lombok.Setter;
 @EqualsAndHashCode(of="codigo")
 public class Carro implements Serializable{
 	
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -2988664017936340351L;
 	
 	private Integer codigo;
