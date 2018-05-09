@@ -80,16 +80,19 @@ public class VendedorController {
     void adicionarVendedor(ActionEvent event) {
     		populaVendedor();
     		if(editando) {
+    			// pega a lista vendedor da filial
     			List<Vendedor> dados = filial.getVendedores();
-    			for (Vendedor dadoArquivo : dados) {
-    				if (dadoArquivo.equals(dados)) {
-    					dados.remove(dadoArquivo);
+    			for (Vendedor vendedores : dados) {
+    				if (vendedores.equals(dados)) {
+    					dados.remove(vendedores);
     					dados.add(vendedor);
     					break;
     				}
     			}
     			filial.setVendedores(dados);
+    			// exclui e filial atual do arquivo
     			filialDAO.excluir(filial);
+    			// add a nova filial no arquivo
     			filialDAO.inserir(filial);
     		}else {
     			List<Vendedor> dados = filial.getVendedores();
