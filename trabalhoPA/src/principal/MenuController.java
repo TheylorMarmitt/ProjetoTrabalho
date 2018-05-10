@@ -17,7 +17,6 @@ public class MenuController {
     @FXML
     private Button btnAdicionarFilial;
     
-
     @FXML
     private Button btnAdicionarCliente;
 
@@ -29,6 +28,7 @@ public class MenuController {
 
     @FXML
     private Button btnAdicionarVendedorEmFilial;
+    
 
     @FXML
     void cadastrarFilial(ActionEvent event) {

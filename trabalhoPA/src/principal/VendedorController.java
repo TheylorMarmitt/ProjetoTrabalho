@@ -72,8 +72,14 @@ public class VendedorController {
 	private void initialize() {
 		tbcCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
 		tbcNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-	
+		populaCombo();
 		novoVendedor();
+	}
+    
+	private void populaCombo(){
+		for(Filial filial: filialDAO.listar()){
+			cbFilial.getItems().add(filial);
+		}
 	}
 
     @FXML
@@ -154,6 +160,7 @@ public class VendedorController {
 		tfCPF.clear();
 		tfEmail.clear();
 		dtNascimento.setValue(null);
+		//tblVendedor.setItems(FXCollections.observableArrayList(filial.getVendedores()));
     }
 	
 }

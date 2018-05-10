@@ -2,6 +2,7 @@ package principal;
 
 import java.time.LocalDate;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -17,6 +18,9 @@ import principal.model.Cliente;
 
 public class ClienteController {
 
+
+    @FXML
+    private TextField tfCodigo;
 
     @FXML
     private TextField tfNome;
@@ -57,13 +61,11 @@ public class ClienteController {
     @FXML
     private TableColumn<Cliente, LocalDate> tbcDataCadastro;
     
-    private Cliente cliente;
+    private Cliente cliente = new Cliente();
     
     private boolean editando;
     
     private ClienteDAO clienteDAO = new ClienteArquivo();
-    
-    private Integer codigo = 0;
     
 	@FXML
 	private void initialize() {
@@ -81,7 +83,6 @@ public class ClienteController {
     			clienteDAO.alterar(cliente);
     		}else {
     			clienteDAO.inserir(cliente);
-    			codigo = cliente.getCodigo();
     		}
     		novoCliente();
     		tblCliente.refresh();
@@ -99,7 +100,7 @@ public class ClienteController {
     }
     
     public void populaCliente() {
-    		cliente.setCodigo(codigo+1);
+    		cliente.setCodigo(Integer.valueOf((tfCodigo.getText())));
     		cliente.setNome(tfNome.getText());
     		cliente.setEmail(tfEmail.getText());
     		cliente.setTelefone(tfTelefone.getText());
@@ -110,6 +111,7 @@ public class ClienteController {
     }
     
     public void populaTela(Cliente cliente) {
+    		tfCodigo.setText(cliente.getCodigo().toString());
     		tfNome.setText(cliente.getNome());
     		tfCPF.setText(cliente.getCpf());
     		tfCNH.setText(cliente.getCnh());
@@ -128,12 +130,14 @@ public class ClienteController {
 	}
     
     void novoCliente() {
+    		tfCodigo.clear();
     		tfNome.clear();
     		tfCPF.clear();
     		tfEmail.clear();
     		tfTelefone.clear();
     		tfCNH.clear();
     		dtNascimento.setValue(null);
+    		tblCliente.setItems(FXCollections.observableArrayList(clienteDAO.listar()));
     }
 
 
