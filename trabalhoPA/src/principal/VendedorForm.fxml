@@ -23,10 +23,10 @@
             <TextField fx:id="tfCPF" layoutX="344.0" layoutY="287.0" prefHeight="27.0" prefWidth="228.0" />
             <TextField fx:id="tfEmail" layoutX="344.0" layoutY="315.0" prefHeight="27.0" prefWidth="336.0" />
             <DatePicker fx:id="dtNascimento" layoutX="391.0" layoutY="353.0" />
-            <TableView fx:id="tblVendedor" layoutX="233.0" layoutY="434.0" onMouseClicked="#selecionaVendedor" prefHeight="200.0" prefWidth="558.0">
+            <TableView fx:id="tblVendedor" layoutX="229.0" layoutY="434.0" onMouseClicked="#selecionaVendedor" prefHeight="200.0" prefWidth="575.0">
               <columns>
                 <TableColumn fx:id="tbcCodigo" prefWidth="75.0" text="Codigo" />
-                <TableColumn fx:id="tbcNome" prefWidth="482.0" text="Nome" />
+                <TableColumn fx:id="tbcNome" prefWidth="495.0" text="Nome" />
               </columns>
             </TableView>
             <Button fx:id="btnAdicionar" layoutX="391.0" layoutY="396.0" mnemonicParsing="false" onAction="#adicionarVendedor" text="Adicionar" />

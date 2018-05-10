@@ -16,6 +16,19 @@ public class MenuController {
 
     @FXML
     private Button btnAdicionarFilial;
+    
+
+    @FXML
+    private Button btnAdicionarCliente;
+
+    @FXML
+    private Button btnAlugar;
+    
+    @FXML
+    private Button btnAdicionarCarroEmFilial;
+
+    @FXML
+    private Button btnAdicionarVendedorEmFilial;
 
     @FXML
     void cadastrarFilial(ActionEvent event) {
@@ -28,5 +41,42 @@ public class MenuController {
 			e1.printStackTrace();
 		}
     }
+    
+    @FXML
+    void cadastrarCliente(ActionEvent event) {
+    	FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("ClienteForm.fxml"));
+		try {
+			AnchorPane aluguelView = (AnchorPane) loader.load();
+			bpPrincipal.setCenter(aluguelView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+    }
+
+    @FXML
+    void cadastrarVendedor(ActionEvent event) {
+    	FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("VendedorForm.fxml"));
+		try {
+			AnchorPane aluguelView = (AnchorPane) loader.load();
+			bpPrincipal.setCenter(aluguelView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+    }
+    
+    @FXML
+    void cadastrarCarro(ActionEvent event) {
+
+    }
+
+    @FXML
+    void realizarAluguel(ActionEvent event) {
+
+    }
+
+
+
 
 }
