@@ -6,6 +6,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
@@ -14,21 +16,19 @@ public class MenuController {
     @FXML
     private BorderPane bpPrincipal;
 
-    @FXML
-    private Button btnAdicionarFilial;
-    
-    @FXML
-    private Button btnAdicionarCliente;
+
+     @FXML
+    private MenuItem mnuCadastroFilial;
 
     @FXML
-    private Button btnAlugar;
-    
-    @FXML
-    private Button btnAdicionarCarroEmFilial;
+    private MenuItem mnuCadastroCliente;
 
     @FXML
-    private Button btnAdicionarVendedorEmFilial;
-    
+    private MenuItem mnuCadastroVendedor;
+    @FXML
+    private MenuItem cadastroCarro;
+
+  
 
     @FXML
     void cadastrarFilial(ActionEvent event) {
@@ -71,7 +71,7 @@ public class MenuController {
     	FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("Carro.fxml"));
 		try {
-			BorderPane aluguelView = (BorderPane) loader.load();
+			AnchorPane aluguelView = (AnchorPane) loader.load();
 			bpPrincipal.setCenter(aluguelView);
 		} catch (IOException e1) {
 			e1.printStackTrace();

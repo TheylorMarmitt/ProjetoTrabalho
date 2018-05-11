@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane fx:id="bpPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.MenuController">
-   <top>
-      <Pane prefHeight="80.0" prefWidth="800.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="btnAdicionarFilial" layoutX="297.0" layoutY="29.0" mnemonicParsing="false" onAction="#cadastrarFilial" text="Cadastrar Filial" />
-            <Button fx:id="btnAdicionarCliente" layoutX="134.0" layoutY="28.0" mnemonicParsing="false" onAction="#cadastrarCliente" text="Cadastrar Cliente" />
-            <Button fx:id="btnAlugar" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#realizarAluguel" prefHeight="56.0" prefWidth="81.0" text="Alugar" />
-            <Button fx:id="btnAdicionarCarroEmFilial" layoutX="466.0" layoutY="29.0" mnemonicParsing="false" onAction="#cadastrarCarro" text="Cadastrar Carro" />
-            <Button fx:id="btnAdicionarVendedorEmFilial" layoutX="641.0" layoutY="28.0" mnemonicParsing="false" onAction="#cadastrarVendedor" text="Cadastrar Vendedor" />
-         </children>
-      </Pane>
-   </top>
+<BorderPane fx:id="bpPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.MenuController">
    <left>
       <Pane prefHeight="520.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
    </left>
-   <center>
-      <Pane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
-   </center>
    <right>
       <Pane prefHeight="520.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
    </right>
    <bottom>
       <Pane prefHeight="0.0" prefWidth="601.0" BorderPane.alignment="CENTER" />
    </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastro">
+            <items>
+              <MenuItem fx:id="mnuCadastroFilial" mnemonicParsing="false" onAction="#cadastrarFilial" text="Filial" />
+                  <MenuItem fx:id="mnuCadastroCliente" mnemonicParsing="false" onAction="#cadastrarCliente" text="Cliente" />
+                  <MenuItem fx:id="mnuCadastroVendedor" mnemonicParsing="false" onAction="#cadastrarVendedor" text="Vendedor" />
+                  <MenuItem fx:id="cadastroCarro" mnemonicParsing="false" onAction="#cadastrarCarro" text="Carro" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Alugar">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
 </BorderPane>

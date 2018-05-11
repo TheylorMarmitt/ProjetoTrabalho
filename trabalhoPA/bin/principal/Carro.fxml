@@ -6,66 +6,39 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.CarroController">
-   <top>
-      <Pane prefHeight="200.0" prefWidth="636.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label layoutX="149.0" layoutY="83.0" text="Código" />
-            <TextField fx:id="tfCodigo" layoutX="194.0" layoutY="79.0" />
-            <Label layoutX="149.0" layoutY="125.0" text="Marca" />
-            <TextField fx:id="tfMarca" layoutX="194.0" layoutY="121.0" />
-            <Label layoutX="149.0" layoutY="158.0" text="Valor" />
-            <TextField fx:id="tfValor" layoutX="194.0" layoutY="154.0" />
-            <TextField fx:id="tfModelo" layoutX="194.0" layoutY="188.0" />
-            <Label layoutX="367.0" layoutY="83.0" text="Cor" />
-            <TextField fx:id="tfCor" layoutX="401.0" layoutY="79.0" />
-            <Label layoutX="366.0" layoutY="117.0" text="Placa" />
-            <TextField fx:id="tfPlaca" layoutX="401.0" layoutY="113.0" />
-            <CheckBox layoutX="421.0" layoutY="180.0" mnemonicParsing="false" text="Disponível" />
-            <TextField fx:id="tfAno" layoutX="401.0" layoutY="146.0" />
-            <Label layoutX="366.0" layoutY="150.0" text="Ano" />
-         </children>
-      </Pane>
-   </top>
-   <left>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label layoutX="137.0" layoutY="-7.0" prefHeight="22.0" prefWidth="44.0" text="Modelo" />
-         </children>
-      </Pane>
-   </left>
-   <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <TableView fx:id="tbCarro" layoutX="-170.0" layoutY="62.0" onMouseClicked="#selecionaCarro" prefHeight="200.0" prefWidth="610.0">
-              <columns>
-                  <TableColumn fx:id="tbcCodigo" prefWidth="75.0" text="Codigo" />
-                  <TableColumn fx:id="tbcMarca" prefWidth="75.0" text="Marca" />
-                  <TableColumn fx:id="tbcModelo" prefWidth="75.0" text="Modelo" />
-                  <TableColumn fx:id="tbcAno" text="Ano" />
-                <TableColumn fx:id="tbcValor" prefWidth="75.0" text="Valor" />
-                <TableColumn fx:id="tbcCor" prefWidth="75.0" text="Cor" />
-                  <TableColumn fx:id="tbcPlaca" prefWidth="75.0" text="Placa" />
-                  <TableColumn fx:id="tbcDisponivel" prefWidth="79.0" text="Disponível" />
-              </columns>
-            </TableView>
-            <Button layoutX="184.0" layoutY="14.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
-            <Button layoutX="246.0" layoutY="14.0" mnemonicParsing="false" onAction="#novo" text="Novo" />
-         </children>
-      </Pane>
-   </center>
-   <right>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button layoutX="17.0" layoutY="16.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
-         </children>
-      </Pane>
-   </right>
-   <bottom>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-   </bottom>
-</BorderPane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.CarroController">
+   <children>
+      <TextField fx:id="tfCodigo" layoutX="204.0" layoutY="89.0" />
+      <TextField fx:id="tfMarca" layoutX="204.0" layoutY="131.0" />
+      <TextField fx:id="tfValor" layoutX="204.0" layoutY="164.0" />
+      <TextField fx:id="tfModelo" layoutX="204.0" layoutY="198.0" />
+      <TextField fx:id="tfCor" layoutX="411.0" layoutY="89.0" />
+      <TextField fx:id="tfPlaca" layoutX="411.0" layoutY="123.0" />
+      <TextField fx:id="tfAno" layoutX="411.0" layoutY="156.0" />
+      <CheckBox layoutX="431.0" layoutY="190.0" mnemonicParsing="false" text="Disponível" />
+      <Button fx:id="btnSalvar" layoutX="266.0" layoutY="275.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+      <Button fx:id="btnNovo" layoutX="447.0" layoutY="275.0" mnemonicParsing="false" onAction="#novo" text="Novo" />
+      <Button fx:id="btnExcluir" layoutX="347.0" layoutY="275.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
+      <TableView fx:id="tbCarro" layoutX="67.0" layoutY="315.0" onMouseClicked="#selecionaCarro" prefHeight="200.0" prefWidth="610.0">
+         <columns>
+            <TableColumn fx:id="tbcCodigo" prefWidth="75.0" text="Codigo" />
+            <TableColumn fx:id="tbcMarca" prefWidth="75.0" text="Marca" />
+            <TableColumn fx:id="tbcModelo" prefWidth="75.0" text="Modelo" />
+            <TableColumn fx:id="tbcAno" text="Ano" />
+            <TableColumn fx:id="tbcValor" prefWidth="75.0" text="Valor" />
+            <TableColumn fx:id="tbcCor" prefWidth="75.0" text="Cor" />
+            <TableColumn fx:id="tbcPlaca" prefWidth="75.0" text="Placa" />
+            <TableColumn fx:id="tbcDisponivel" prefWidth="79.0" text="Disponível" />
+         </columns>
+      </TableView>
+      <Label layoutX="151.0" layoutY="196.0" prefHeight="22.0" prefWidth="44.0" text="Modelo" />
+      <Label layoutX="159.0" layoutY="93.0" text="Código" />
+      <Label layoutX="159.0" layoutY="135.0" text="Marca" />
+      <Label layoutX="159.0" layoutY="168.0" text="Valor" />
+      <Label layoutX="377.0" layoutY="93.0" text="Cor" />
+      <Label layoutX="376.0" layoutY="127.0" text="Placa" />
+      <Label layoutX="376.0" layoutY="160.0" text="Ano" />
+   </children>
+</AnchorPane>
