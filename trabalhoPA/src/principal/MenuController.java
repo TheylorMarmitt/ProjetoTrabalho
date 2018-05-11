@@ -68,7 +68,14 @@ public class MenuController {
     
     @FXML
     void cadastrarCarro(ActionEvent event) {
-
+    	FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("Carro.fxml"));
+		try {
+			BorderPane aluguelView = (BorderPane) loader.load();
+			bpPrincipal.setCenter(aluguelView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
     }
 
     @FXML
