@@ -61,9 +61,7 @@ public class VendedorController {
     
     private Filial filial;
     
-    private FilialDAO filialDAO = new FilialArquivo();
-    
-    private Integer codigo; 
+    private FilialDAO filialDAO = new FilialArquivo(); 
     
     private boolean editando;
     
@@ -124,7 +122,7 @@ public class VendedorController {
     }
     
     public void populaVendedor() {
-    		vendedor.setCodigo(codigo + 1);
+    		vendedor.setCodigo(filial.getVendedores().size()+1);
     		vendedor.setCpf(tfCPF.getText());
     		vendedor.setDataNascimento(dtNascimento.getValue());
     		vendedor.setDataDeAdmissao(LocalDate.now());
@@ -161,6 +159,7 @@ public class VendedorController {
 		tfEmail.clear();
 		dtNascimento.setValue(null);
 		//tblVendedor.setItems(FXCollections.observableArrayList(filial.getVendedores()));
+		
     }
 	
 }

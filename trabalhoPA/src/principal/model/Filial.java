@@ -24,17 +24,13 @@ public class Filial implements Serializable{
 	private String nome;
 	private String cidade;
 	private String uf;
-	private Integer cnpj; //não pode ser int, cnpj tem 14 caracteres numericos, int só permite até 9
+	private Integer cnpj; //nao pode ser int, cnpj tem 14 caracteres numericos, int so permite ate 9
 	private List<Vendedor> vendedores;
 	private List<Carro> carros;
+	
 	@Override
 	public String toString() {
-		return "Filial [codigo=" + codigo + ", nome=" + nome + ", cidade=" + cidade + ", uf=" + uf + ", cnpj=" + cnpj
-				+ "]";
+		return this.nome;
 	}
-	
-	
-	
-	
 	
 }
