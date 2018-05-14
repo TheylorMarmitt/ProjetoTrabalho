@@ -2,7 +2,6 @@ package principal.model;
 
 
 import java.io.Serializable;
-import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -25,8 +24,7 @@ public class Filial implements Serializable{
 	private String cidade;
 	private String uf;
 	private Integer cnpj; //nao pode ser int, cnpj tem 14 caracteres numericos, int so permite ate 9
-	private List<Vendedor> vendedores;
-	private List<Carro> carros;
+
 	
 	@Override
 	public String toString() {

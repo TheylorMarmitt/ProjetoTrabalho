@@ -1,20 +1,15 @@
 package principal;
 
 
-import java.io.IOException;
-
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import principal.dao.CarroArquivo;
 import principal.dao.CarroDAO;
 import principal.model.Carro;
@@ -63,6 +58,9 @@ public class CarroController {
 
     @FXML
     private TableColumn<Carro, String> tbcPlaca;
+    
+    @FXML
+    private CheckBox ckbDisponivel;
 
     //@FXML
     //private TableColumn<Carro, Boolean> tbcDisponivel;
@@ -72,7 +70,7 @@ public class CarroController {
     
 
 	    Carro carro;
-		 private  CarroDAO carroDao = new CarroArquivo();
+		private  CarroDAO carroDao = new CarroArquivo();
 		Boolean editando;
 	
 		@FXML
@@ -89,15 +87,15 @@ public class CarroController {
 			carro = new Carro();
 			tbCarro.setItems(FXCollections.observableArrayList());
 	
-	novoCarro();
+			novoCarro();
 		}
 	
 		
 	
 		@FXML
 		void excluir(ActionEvent event) {
-		 carroDao.excluir(carro);
-				novoCarro();
+			carroDao.excluir(carro);
+			novoCarro();
 		}
 	
 		@FXML
@@ -145,6 +143,7 @@ public class CarroController {
 			carro.setCor(tfCor.getText());
 			carro.setPlaca(tfPlaca.getText());
 			carro.setAno(Integer.parseInt(tfAno.getText()));
+			carro.setDisponivel(ckbDisponivel.isArmed());
 		}
 	
 		void populaTela(Carro carro) {
@@ -155,6 +154,7 @@ public class CarroController {
 			tfCor.setText(carro.getCor());
 			tfPlaca.setText(carro.getPlaca());
 			tfValor.setText(carro.getValor().toString());
+			
 		}
 		void novoCarro() {
 			tfCodigo.clear();
@@ -167,6 +167,7 @@ public class CarroController {
 			tfAno.clear();
 			carro = new Carro();
 			editando = false;
+			ckbDisponivel.disarm();
 			tbCarro.setItems(FXCollections.observableArrayList(carroDao.listar()));
 		}
 		
