@@ -94,8 +94,8 @@ public class CarroController {
 	
 		@FXML
 		void excluir(ActionEvent event) {
-		 carroDao.excluir(carro);
-				novoCarro();
+			carroDao.excluir(carro);
+			novoCarro();
 		}
 	
 		@FXML
