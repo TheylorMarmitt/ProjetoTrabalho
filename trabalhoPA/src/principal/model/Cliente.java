@@ -2,7 +2,6 @@ package principal.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -28,10 +27,6 @@ public class Cliente implements Serializable {
 	private LocalDate dataDeCadastro;
 	private String cnh;
 	
-	public Integer idadeDoCliente() {		
-		long idade;
-		idade = ChronoUnit.YEARS.between(dataNascimento, LocalDate.now());
-		return (int) idade;
-	}
+	
 }
  

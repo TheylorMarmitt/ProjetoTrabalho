@@ -61,7 +61,7 @@ public class DevolucaoController {
 	    void devolver(ActionEvent event) {
 	    		aluguelDao.excluir(aluguel);
 	    		aluguel.setDataDevolucao(LocalDate.now());
-	    		Double valorTotal = aluguel.diasLocacao() * Double.parseDouble(tfValorTaxa.getText());
+	    		Double valorTotal = (aluguel.diasLocacao() * Double.parseDouble(tfValorTaxa.getText())) + aluguel.getCarro().getValor() ;
 	    		LblValorTotal.setText(valorTotal.toString());
 	    }
 	

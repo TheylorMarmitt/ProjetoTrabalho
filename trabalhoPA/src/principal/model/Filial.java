@@ -1,4 +1,4 @@
-package principal.model;
+	package principal.model;
 
 
 import java.io.Serializable;
