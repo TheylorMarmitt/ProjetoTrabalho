@@ -28,7 +28,7 @@ public class Aluguel {
 	private long dias;
 	private long idade;
 
-	public Integer calculaValor() {
+	public Integer diasLocacao() {
 		dias = ChronoUnit.DAYS.between(this.dataAluguel, this.dataDevolucao);
 		return (int) dias;
 	}

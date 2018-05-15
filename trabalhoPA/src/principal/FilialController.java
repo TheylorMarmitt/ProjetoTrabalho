@@ -62,23 +62,19 @@ public class FilialController {
     private TableColumn<Filial, Number> tbcCnpj;
 
     Filial filial;
-	 private  FilialDAO filialDao = new FilialArquivo();
+	private  FilialDAO filialDao = new FilialArquivo();
 	Boolean editando;
 
 	@FXML
 	private void initialize() {
-		// Inicializa a tabela de filial com duas colunas.
 		tbcCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
 		tbcNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
 		tbcUf.setCellValueFactory(new PropertyValueFactory<>("uf"));
 		tbcCidade.setCellValueFactory(new PropertyValueFactory<>("cidade"));
 		tbcCnpj.setCellValueFactory(new PropertyValueFactory<>("cnpj"));
 		
+		novoFilial();
 
-		filial = new Filial();
-		tblFilial.setItems(FXCollections.observableArrayList());
-
-novoFilial();
 	}
 
 	
@@ -152,8 +148,5 @@ novoFilial();
 		editando = false;
 		tblFilial.setItems(FXCollections.observableArrayList(filialDao.listar()));
 	}
-	
-	
-	
 	
 }

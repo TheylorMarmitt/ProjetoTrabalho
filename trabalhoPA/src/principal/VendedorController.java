@@ -35,7 +35,7 @@ public class VendedorController {
     private TableView<Vendedor> tblVendedor;
 
     @FXML
-    private TableColumn<Vendedor, Integer> tbcCodigo;
+    private TableColumn<Vendedor, Number> tbcCodigo;
 
     @FXML
     private TableColumn<Vendedor, String> tbcNome;
@@ -55,7 +55,7 @@ public class VendedorController {
     
     Vendedor vendedor; 
     
-    private VendedorDAO vendedorDAO = new VendedorArquivo(); 
+    private VendedorDAO vendedorDao = new VendedorArquivo(); 
     
     private boolean editando;
     
@@ -64,6 +64,9 @@ public class VendedorController {
 	private void initialize() {
 		tbcCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
 		tbcNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+		
+		vendedor = new Vendedor();
+
 		novoVendedor();
 	}
     
@@ -71,9 +74,9 @@ public class VendedorController {
     void adicionarVendedor(ActionEvent event) {
     		populaVendedor();
     		if (editando) {
-			vendedorDAO.alterar(vendedor);
+			vendedorDao.alterar(vendedor);
 		} else {
-			vendedorDAO.inserir(vendedor);
+			vendedorDao.inserir(vendedor);
 		}
 		novoVendedor();
 		tblVendedor.refresh();
@@ -86,7 +89,7 @@ public class VendedorController {
 
     @FXML
     void removerVendedor(ActionEvent event) {
-    		vendedorDAO.excluir(vendedor);
+    		vendedorDao.excluir(vendedor);
     		novoVendedor();
     }
     
@@ -118,13 +121,14 @@ public class VendedorController {
 	}
     
     void novoVendedor() {
+    		
     		tfCodigo.clear();
 		tfNome.clear();
 		tfTelefone.clear();
 		tfCPF.clear();
 		tfEmail.clear();
 		dtNascimento.setValue(null);
-		tblVendedor.setItems(FXCollections.observableArrayList(vendedorDAO.listar()));
+		tblVendedor.setItems(FXCollections.observableArrayList(vendedorDao.listar()));
     }
 	
 }
