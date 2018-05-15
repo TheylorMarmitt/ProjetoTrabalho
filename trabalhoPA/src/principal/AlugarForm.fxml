@@ -22,3 +22,4 @@
       <Button fx:id="btnAlugar" layoutX="309.0" layoutY="399.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="159.0" text="Alugar" />
    </children>
 </AnchorPane>
+
