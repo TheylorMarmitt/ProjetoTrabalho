@@ -23,6 +23,7 @@ public class Aluguel {
 	private Carro carro;
 	private Cliente cliente;
 	private Vendedor vendedor;
+	private Filial filial;
 	
 	private long dias;
 	private long idade;
