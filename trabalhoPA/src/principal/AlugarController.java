@@ -31,6 +31,7 @@ public class AlugarController {
 
     @FXML
     void selecionaVendedor(MouseEvent event) {
+    	
 
     }
 
