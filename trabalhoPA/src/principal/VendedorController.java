@@ -1,7 +1,5 @@
 package principal;
 
-import java.time.LocalDate;
-
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,7 +15,6 @@ import principal.dao.VendedorDAO;
 import principal.model.Vendedor;
 
 public class VendedorController {
-
 
     @FXML
     private TextField tfNome;
@@ -42,6 +39,9 @@ public class VendedorController {
 
     @FXML
     private TableColumn<Vendedor, String> tbcNome;
+    
+    @FXML
+    private TextField tfCodigo;
 
     @FXML
     private Button btnAdicionar;
@@ -71,18 +71,12 @@ public class VendedorController {
     void adicionarVendedor(ActionEvent event) {
     		populaVendedor();
     		if (editando) {
-				vendedorDAO.alterar(vendedor);
-			} else {
-				vendedorDAO.inserir(vendedor);
-			}
-			
-			
-			populaVendedor();
-	
-			if (!editando) {
-				tblVendedor.getItems().add(vendedor);
-			}
-			novoVendedor();
+			vendedorDAO.alterar(vendedor);
+		} else {
+			vendedorDAO.inserir(vendedor);
+		}
+		novoVendedor();
+		tblVendedor.refresh();
     }
     
     @FXML
@@ -97,17 +91,16 @@ public class VendedorController {
     }
     
     public void populaVendedor() {
-
-    		vendedor.setCpf(tfCPF.getText());
-    		vendedor.setDataNascimento(dtNascimento.getValue());
-    		vendedor.setDataDeAdmissao(LocalDate.now());
-    		vendedor.setDataDeDemissao(null);
-    		vendedor.setEmail(tfEmail.getText());
+    		vendedor.setCodigo(Integer.parseInt(tfCodigo.getText()));
     		vendedor.setNome(tfNome.getText());
     		vendedor.setTelefone(tfTelefone.getText());
+    		vendedor.setCpf(tfCPF.getText());
+    		vendedor.setEmail(tfEmail.getText());
+    		vendedor.setDataNascimento(dtNascimento.getValue());
     }
     
     public void populaTela(Vendedor vendedor) {
+    		tfCodigo.setText(vendedor.getCodigo().toString());
     		tfNome.setText(vendedor.getNome());
     		tfTelefone.setText(vendedor.getTelefone());
     		tfCPF.setText(vendedor.getCpf());
@@ -118,20 +111,20 @@ public class VendedorController {
     @FXML
 	void selecionaVendedor(MouseEvent event) {
 		if (tblVendedor.getSelectionModel().getSelectedItem() != null) {
-			vendedor = (Vendedor) tblVendedor.getSelectionModel().getSelectedItem();
+			vendedor = tblVendedor.getSelectionModel().getSelectedItem();
 			populaTela(vendedor);
 			editando = true;
 		}
 	}
     
     void novoVendedor() {
+    		tfCodigo.clear();
 		tfNome.clear();
 		tfTelefone.clear();
 		tfCPF.clear();
 		tfEmail.clear();
 		dtNascimento.setValue(null);
 		tblVendedor.setItems(FXCollections.observableArrayList(vendedorDAO.listar()));
-
     }
 	
 }

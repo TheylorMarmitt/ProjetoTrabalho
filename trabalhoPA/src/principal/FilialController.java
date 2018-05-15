@@ -139,7 +139,7 @@ novoFilial();
 		tfNome.setText(filial.getNome());
 		tfCidade.setText(filial.getCidade());
 		tfUf.setText(filial.getUf());
-		tfCNPJ.setText(filial.getCnpj().toString());
+		tfCNPJ.setText(String.valueOf(filial.getCnpj()));
 	}
 	void novoFilial() {
 		tfCodigo.clear();
