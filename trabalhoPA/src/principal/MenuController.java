@@ -5,8 +5,6 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -16,8 +14,7 @@ public class MenuController {
     @FXML
     private BorderPane bpPrincipal;
 
-
-     @FXML
+    @FXML
     private MenuItem mnuCadastroFilial;
 
     @FXML
@@ -25,10 +22,15 @@ public class MenuController {
 
     @FXML
     private MenuItem mnuCadastroVendedor;
+    
     @FXML
     private MenuItem cadastroCarro;
+    
+    @FXML
+    private MenuItem mnuAlugar;
 
-  
+    @FXML
+    private MenuItem mnuDevolucao;
 
     @FXML
     void cadastrarFilial(ActionEvent event) {
@@ -77,13 +79,29 @@ public class MenuController {
 			e1.printStackTrace();
 		}
     }
-
+    
     @FXML
-    void realizarAluguel(ActionEvent event) {
-
+    void devolverVeiculo(ActionEvent event) {
+    	FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("DevolucaoForm.fxml"));
+		try {
+			AnchorPane aluguelView = (AnchorPane) loader.load();
+			bpPrincipal.setCenter(aluguelView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
     }
-
-
-
+    
+    @FXML
+    void alugarVeiculo(ActionEvent event) {
+    	FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("AlugarForm.fxml"));
+		try {
+			AnchorPane aluguelView = (AnchorPane) loader.load();
+			bpPrincipal.setCenter(aluguelView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+    }
 
 }

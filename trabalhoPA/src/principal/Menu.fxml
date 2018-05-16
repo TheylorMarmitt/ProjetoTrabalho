@@ -29,7 +29,8 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Alugar">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="mnuAlugar" mnemonicParsing="false" onAction="#alugarVeiculo" text="Alugar" />
+                  <MenuItem fx:id="mnuDevolucao" mnemonicParsing="false" onAction="#devolverVeiculo" text="Devolucao" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
