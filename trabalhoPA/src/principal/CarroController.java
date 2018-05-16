@@ -62,8 +62,8 @@ public class CarroController {
     @FXML
     private CheckBox ckbDisponivel;
 
-    //@FXML
-    //private TableColumn<Carro, Boolean> tbcDisponivel;
+    @FXML
+    private TableColumn<Carro, Boolean> tbcDisponivel;
     
     @FXML
     private TableColumn<Carro, Number> tbcAno;
@@ -72,7 +72,6 @@ public class CarroController {
 	    Carro carro;
 		private  CarroDAO carroDao = new CarroArquivo();
 		Boolean editando;
-	
 		@FXML
 		private void initialize() {
 			// Inicializa a tabela de carro com duas colunas.
@@ -83,7 +82,7 @@ public class CarroController {
 			tbcModelo.setCellValueFactory(new PropertyValueFactory<>("modelo"));
 			tbcCor.setCellValueFactory(new PropertyValueFactory<>("cor"));
 			tbcPlaca.setCellValueFactory(new PropertyValueFactory<>("placa"));
-	
+			tbcDisponivel.setCellValueFactory(new PropertyValueFactory<>("disponivel"));
 			carro = new Carro();
 			tbCarro.setItems(FXCollections.observableArrayList());
 	
@@ -143,7 +142,7 @@ public class CarroController {
 			carro.setCor(tfCor.getText());
 			carro.setPlaca(tfPlaca.getText());
 			carro.setAno(Integer.parseInt(tfAno.getText()));
-			carro.setDisponivel(ckbDisponivel.isArmed());
+			carro.setDisponivel(ckbDisponivel.isSelected());
 		}
 	
 		void populaTela(Carro carro) {
@@ -154,6 +153,10 @@ public class CarroController {
 			tfCor.setText(carro.getCor());
 			tfPlaca.setText(carro.getPlaca());
 			tfValor.setText(carro.getValor().toString());
+			
+			if(carro.getDisponivel()) {
+				ckbDisponivel.setSelected(true);
+			}
 			
 		}
 		void novoCarro() {
@@ -167,7 +170,7 @@ public class CarroController {
 			tfAno.clear();
 			carro = new Carro();
 			editando = false;
-			ckbDisponivel.disarm();
+			ckbDisponivel.setSelected(false);
 			tbCarro.setItems(FXCollections.observableArrayList(carroDao.listar()));
 		}
 		
