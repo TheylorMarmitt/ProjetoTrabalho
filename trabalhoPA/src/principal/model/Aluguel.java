@@ -1,5 +1,6 @@
 package principal.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
@@ -14,8 +15,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of="codigo")
-public class Aluguel {
+public class Aluguel implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4386655266802551653L;
+	
 	private Integer codigo;
 	private LocalDate dataAluguel;
 	private LocalDate dataDevolucao;

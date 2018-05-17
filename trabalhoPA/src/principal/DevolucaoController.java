@@ -28,10 +28,10 @@ public class DevolucaoController {
 
 	    @FXML
 	    private TableColumn<Aluguel, String> tbcCliente;
-
+	    
 	    @FXML
 	    private TableColumn<Aluguel, LocalDate> tbcDataLocacao;
-
+	     
 	    @FXML
 	    private Button btnDevolucao;
 
@@ -51,10 +51,8 @@ public class DevolucaoController {
 			tbcCarro.setCellValueFactory(new PropertyValueFactory<>("carro"));
 			tbcCliente.setCellValueFactory(new PropertyValueFactory<>("cliente"));
 			tbcDataLocacao.setCellValueFactory(new PropertyValueFactory<>("dataAluguel"));
-
-			aluguel = new Aluguel();
-			tblAlugados.setItems(FXCollections.observableArrayList(aluguelDao.listar()));
 			
+			novoAluguel();
 		}
 	    
 	    @FXML
@@ -64,6 +62,13 @@ public class DevolucaoController {
 	    		Double valorTotal = (aluguel.diasLocacao() * Double.parseDouble(tfValorTaxa.getText())) + aluguel.getCarro().getValor() ;
 	    		LblValorTotal.setText(valorTotal.toString());
 	    		
+	    		
+	    		
+	    }
+	    
+	    void novoAluguel() {
+	    		aluguel = new Aluguel();
+	    		tblAlugados.setItems(FXCollections.observableArrayList(aluguelDao.listar()));
 	    }
 	
 }
