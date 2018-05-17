@@ -63,6 +63,7 @@ public class DevolucaoController {
 	    		aluguel.setDataDevolucao(LocalDate.now());
 	    		Double valorTotal = (aluguel.diasLocacao() * Double.parseDouble(tfValorTaxa.getText())) + aluguel.getCarro().getValor() ;
 	    		LblValorTotal.setText(valorTotal.toString());
+	    		
 	    }
 	
 }
