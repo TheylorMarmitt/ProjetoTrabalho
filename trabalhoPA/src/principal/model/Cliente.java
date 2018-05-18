@@ -27,6 +27,10 @@ public class Cliente implements Serializable {
 	private LocalDate dataDeCadastro;
 	private String cnh;
 	
+	@Override
+	public String toString() {
+		return this.nome;
+	}
 	
 }
  

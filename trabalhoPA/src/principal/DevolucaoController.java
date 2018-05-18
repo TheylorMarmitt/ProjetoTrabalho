@@ -17,7 +17,7 @@ import principal.model.Aluguel;
 
 public class DevolucaoController {
 
-	 @FXML
+		@FXML
 	    private TableView<Aluguel> tblAlugados;
 
 	    @FXML
@@ -61,9 +61,7 @@ public class DevolucaoController {
 	    		aluguel.setDataDevolucao(LocalDate.now());
 	    		Double valorTotal = (aluguel.diasLocacao() * Double.parseDouble(tfValorTaxa.getText())) + aluguel.getCarro().getValor() ;
 	    		LblValorTotal.setText(valorTotal.toString());
-	    		
-	    		
-	    		
+
 	    }
 	    
 	    void novoAluguel() {

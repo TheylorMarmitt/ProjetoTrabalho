@@ -27,4 +27,8 @@ public class Carro implements Serializable{
 	private String placa;
 	private Boolean disponivel;
 	
+	@Override
+	public String toString() {
+		return this.modelo;
+	}
 }

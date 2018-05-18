@@ -139,6 +139,4 @@ public class ClienteController {
     		dtNascimento.setValue(null);
     		tblCliente.setItems(FXCollections.observableArrayList(clienteDAO.listar()));
     }
-
-
 }

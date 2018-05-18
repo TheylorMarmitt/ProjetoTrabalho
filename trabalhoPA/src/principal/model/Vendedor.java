@@ -24,4 +24,8 @@ public class Vendedor implements Serializable {
 	private String cpf;
 	private String email;
 	
+	@Override
+	public String toString() {
+		return this.nome;
+	}
 }
