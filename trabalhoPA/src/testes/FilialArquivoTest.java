@@ -25,6 +25,16 @@ public class FilialArquivoTest {
 		filialDao.inserir(f);
 		filialDao.listar();
 		filialDao.excluir(f);
+		
+		Filial f2 = new Filial();
+		
+		f2.setCidade("xanxere");
+		f2.setCnpj("123");
+		f2.setCodigo(Integer.valueOf(1));
+		f2.setNome("fulano");
+		f2.setUf("SC");
+		
+		filialDao.inserir(f2);
 		filialDao.alterar(f);
 	}
 }
