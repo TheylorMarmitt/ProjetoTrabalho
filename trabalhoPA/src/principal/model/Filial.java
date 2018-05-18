@@ -2,9 +2,6 @@ package principal.model;
 
 import java.io.Serializable;
 
-import lombok.EqualsAndHashCode;
-
-@EqualsAndHashCode(of = "codigo")
 public class Filial implements Serializable {
 
 	private static final long serialVersionUID = -6911788269286949660L;
