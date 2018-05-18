@@ -60,7 +60,7 @@ public class FilialController {
     private TableColumn<Filial, String> tbcCidade;
 
     @FXML
-    private TableColumn<Filial, Number> tbcCnpj;
+    private TableColumn<Filial, String> tbcCnpj;
 
     Filial filial;
 	private  FilialDAO filialDao = new FilialArquivo();
