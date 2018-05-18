@@ -24,6 +24,7 @@ import principal.dao.FilialDAO;
 import principal.dao.VendedorArquivo;
 import principal.dao.VendedorDAO;
 import principal.model.Aluguel;
+import principal.model.AluguelBuilder;
 import principal.model.Carro;
 import principal.model.Cliente;
 import principal.model.Filial;
@@ -122,12 +123,22 @@ public class AlugarController {
     
     
     void populaAluguel() {
+    		this.aluguel = new AluguelBuilder()
+    				.setCodigo(Integer.parseInt(tfCodigo.getText()))
+    				.setCarro(cbcarro.getValue())
+    				.setFilial(cbFilial.getValue())
+    				.setVendedor(cbVendedor.getValue())
+    				.setDataAluguel(LocalDate.now())
+    				.setDataDevolucao(null)
+    				.getAluguel();
+    		/**
     		aluguel.setCodigo(Integer.parseInt(tfCodigo.getText()));
     		aluguel.setCarro(cbcarro.getValue());
     		aluguel.setFilial(cbFilial.getValue());
     		aluguel.setVendedor(cbVendedor.getValue());
     		aluguel.setDataAluguel(LocalDate.now());
     		aluguel.setDataDevolucao(null);
+    		*/
     }
     
     void novoAluguel(){

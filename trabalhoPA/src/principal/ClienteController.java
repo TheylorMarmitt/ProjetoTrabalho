@@ -15,6 +15,7 @@ import javafx.scene.input.MouseEvent;
 import principal.dao.ClienteArquivo;
 import principal.dao.ClienteDAO;
 import principal.model.Cliente;
+import principal.model.ClienteBuilder;
 
 public class ClienteController {
 
@@ -100,6 +101,18 @@ public class ClienteController {
     }
     
     public void populaCliente() {
+    		this.cliente = new ClienteBuilder()
+    				.setCodigo(Integer.valueOf((tfCodigo.getText())))
+    				.setNome(tfNome.getText())	
+    				.setEmail(tfEmail.getText())
+    				.setTelefone(tfTelefone.getText())
+    				.setCpf(tfCPF.getText())
+    				.setCnh(tfCNH.getText())
+    				.setDataNascimento(dtNascimento.getValue())
+    				.setDataDeCadastro(LocalDate.now())
+    				.getCliente();
+    		
+    		/**		
     		cliente.setCodigo(Integer.valueOf((tfCodigo.getText())));
     		cliente.setNome(tfNome.getText());
     		cliente.setEmail(tfEmail.getText());
@@ -108,6 +121,7 @@ public class ClienteController {
     		cliente.setCnh(tfCNH.getText());
     		cliente.setDataNascimento(dtNascimento.getValue());
     		cliente.setDataDeCadastro(LocalDate.now());
+    		*/
     }
     
     public void populaTela(Cliente cliente) {
@@ -118,6 +132,7 @@ public class ClienteController {
     		tfEmail.setText(cliente.getEmail());
     		tfTelefone.setText(cliente.getTelefone());
     		dtNascimento.setValue(cliente.getDataNascimento());
+
     }
     
     @FXML

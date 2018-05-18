@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import principal.dao.CarroArquivo;
 import principal.dao.CarroDAO;
 import principal.model.Carro;
+import principal.model.CarroBuilder;
 
 
 public class CarroController {
@@ -136,6 +137,17 @@ public class CarroController {
 		}
 	
 		void populaCarro() {
+			this.carro = new CarroBuilder()
+					.setCodigo(Integer.valueOf(tfCodigo.getText()))
+					.setMarca(tfMarca.getText())
+					.setModelo(tfModelo.getText())
+					.setValor(Double.parseDouble(tfValor.getText()))
+					.setCor(tfCor.getText())
+					.setPlaca(tfPlaca.getText())
+					.setAno(Integer.parseInt(tfAno.getText()))
+					.setDisponivel(ckbDisponivel.isSelected())
+					.getCarro();
+			/**
 			carro.setCodigo(Integer.valueOf(tfCodigo.getText()));
 			carro.setMarca(tfMarca.getText());
 			carro.setModelo(tfModelo.getText());
@@ -144,6 +156,7 @@ public class CarroController {
 			carro.setPlaca(tfPlaca.getText());
 			carro.setAno(Integer.parseInt(tfAno.getText()));
 			carro.setDisponivel(ckbDisponivel.isSelected());
+			*/
 		}
 	
 		void populaTela(Carro carro) {

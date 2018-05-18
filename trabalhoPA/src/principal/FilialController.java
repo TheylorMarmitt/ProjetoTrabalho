@@ -129,7 +129,7 @@ public class FilialController {
 				.setNome(tfNome.getText())
 				.setCidade(tfCidade.getText())
 				.setUf(tfUf.getText())
-				.setCnpj(Integer.parseInt(tfCNPJ.getText()))
+				.setCnpj(tfCNPJ.getText())
 				.getFilial();
 	}
 
@@ -138,7 +138,7 @@ public class FilialController {
 		tfNome.setText(filial.getNome());
 		tfCidade.setText(filial.getCidade());
 		tfUf.setText(filial.getUf());
-		tfCNPJ.setText(String.valueOf(filial.getCnpj()));
+		tfCNPJ.setText(filial.getCnpj());
 	}
 	void novoFilial() {
 		tfCodigo.clear();

@@ -4,15 +4,16 @@ public class FilialBuilder {
 
 	private Filial filial = new Filial();
 	
+	public FilialBuilder setCodigo(Integer codigo) {
+		filial.setCodigo(codigo);
+		return this;
+	}
+	
 	public FilialBuilder setCidade(String cidade) {
 		filial.setCidade(cidade);
 		return this;
 	}
 	
-	public FilialBuilder setCodigo(Integer codigo) {
-		filial.setCodigo(codigo);
-		return this;
-	}
 	
 	public FilialBuilder setNome(String nome) {
 		filial.setNome(nome);
@@ -25,7 +26,7 @@ public class FilialBuilder {
 	}
 	
 
-	public FilialBuilder setCnpj(Integer cnpj) {
+	public FilialBuilder setCnpj(String cnpj) {
 		filial.setCnpj(cnpj);
 		return this;
 	}

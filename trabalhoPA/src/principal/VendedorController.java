@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import principal.dao.VendedorArquivo;
 import principal.dao.VendedorDAO;
 import principal.model.Vendedor;
+import principal.model.VendedorBuilder;
 
 public class VendedorController {
 
@@ -94,12 +95,22 @@ public class VendedorController {
     }
     
     public void populaVendedor() {
+    		this.vendedor = new VendedorBuilder()
+    				.setCodigo(Integer.parseInt(tfCodigo.getText()))
+    				.setNome(tfNome.getText())
+    				.setTelefone(tfTelefone.getText())
+    				.setCpf(tfCPF.getText())
+    				.setEmail(tfEmail.getText())
+    				.setDataNascimento(dtNascimento.getValue())
+    				.getVendedor();
+    		/**
     		vendedor.setCodigo(Integer.parseInt(tfCodigo.getText()));
     		vendedor.setNome(tfNome.getText());
     		vendedor.setTelefone(tfTelefone.getText());
     		vendedor.setCpf(tfCPF.getText());
     		vendedor.setEmail(tfEmail.getText());
     		vendedor.setDataNascimento(dtNascimento.getValue());
+    		*/
     }
     
     public void populaTela(Vendedor vendedor) {

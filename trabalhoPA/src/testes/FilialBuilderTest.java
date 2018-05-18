@@ -19,5 +19,18 @@ public class FilialBuilderTest {
 		f.setUf("SC");
 		assertEquals("SC", f.getFilial().getUf());
 		
+		f.setCodigo(Integer.valueOf(1));
+		assertEquals(Integer.valueOf(1), f.getFilial().getCodigo());
+		
+		f.setNome("filial1");
+		assertEquals("filial1", f.getFilial().getNome());
+		
+		f.setCnpj("192837192837");
+		assertEquals("192837192837", f.getFilial().getCnpj());
+		
+		
+		
+	
+		
 	}
 }
