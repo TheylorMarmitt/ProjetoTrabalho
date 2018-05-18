@@ -122,6 +122,7 @@ public class CarroController {
 				tbCarro.getItems().add(carro);
 			}
 			novoCarro();
+			tbCarro.refresh();
 		}
 	
 		@FXML
