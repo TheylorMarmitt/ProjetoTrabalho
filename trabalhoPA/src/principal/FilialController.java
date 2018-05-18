@@ -13,6 +13,7 @@ import javafx.scene.layout.AnchorPane;
 import principal.dao.FilialArquivo;
 import principal.dao.FilialDAO;
 import principal.model.Filial;
+import principal.model.FilialBuilder;
 
 public class FilialController {
 
@@ -123,11 +124,13 @@ public class FilialController {
 	}
 
 	void populaFilial() {
-		filial.setCodigo(Integer.valueOf(tfCodigo.getText()));
-		filial.setNome(tfNome.getText());
-		filial.setCidade(tfCidade.getText());
-		filial.setUf(tfUf.getText());
-		filial.setCnpj(Integer.parseInt(tfCNPJ.getText()));
+		this.filial = new FilialBuilder()
+				.setCodigo(Integer.valueOf(tfCodigo.getText()))
+				.setNome(tfNome.getText())
+				.setCidade(tfCidade.getText())
+				.setUf(tfUf.getText())
+				.setCnpj(Integer.parseInt(tfCNPJ.getText()))
+				.getFilial();
 	}
 
 	void populaTela(Filial filial) {
