@@ -18,12 +18,14 @@ public class FilialTest {
 	@Test
 	public void construtorTest() throws Exception {
 		Filial f = new Filial(1,"nome", "xanxere", "Sc", "1234567899");
-		f.setCidade("Xanxere");
-		f.setCnpj("123456789");
-		f.setCodigo(1);
-		f.setNome("fulano");
-		f.setUf("SC");
-		//assertEquals(F, Filial(1, "fulano", "Xanxere", "SC", "123456789"));
+		assertEquals(Integer.valueOf(1), f.getCodigo());
+		assertEquals("nome", f.getNome());
+		assertEquals("xanxere", f.getCidade());
+		assertEquals("Sc", f.getUf());
+		assertEquals("1234567899", f.getCnpj());
+		
 		
 	}
+
+	
 }
