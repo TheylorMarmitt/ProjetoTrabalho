@@ -5,12 +5,17 @@ import java.util.List;
 public abstract class CrudArquivo<T> implements CrudDAO<T> {
 
 	private ManipuladorArquivo<T> manipulador;
+	
+	protected final String nome;
 
-	public CrudArquivo(){
+	public CrudArquivo(String nome){
+		this.nome = nome;
 		manipulador = criarManipulador();
 	}
 	
-	protected abstract ManipuladorArquivo<T> criarManipulador();
+	protected ManipuladorArquivo<T> criarManipulador() {
+		return new ManipuladorArquivo<>(nome);
+	}
 	
 	@Override
 	public void inserir(T dado) {

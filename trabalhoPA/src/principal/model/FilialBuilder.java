@@ -6,7 +6,6 @@ public class FilialBuilder {
 	
 	public FilialBuilder setCidade(String cidade) {
 		filial.setCidade(cidade);
-		
 		return this;
 	}
 	
