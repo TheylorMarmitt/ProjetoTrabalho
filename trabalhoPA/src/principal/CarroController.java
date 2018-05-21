@@ -133,14 +133,6 @@ public class CarroController {
 				.setModelo(tfModelo.getText()).setValor(Double.parseDouble(tfValor.getText())).setCor(tfCor.getText())
 				.setPlaca(tfPlaca.getText()).setAno(Integer.parseInt(tfAno.getText()))
 				.setDisponivel(ckbDisponivel.isSelected()).getCarro();
-		/**
-		 * carro.setCodigo(Integer.valueOf(tfCodigo.getText()));
-		 * carro.setMarca(tfMarca.getText()); carro.setModelo(tfModelo.getText());
-		 * carro.setValor(Double.parseDouble(tfValor.getText()));
-		 * carro.setCor(tfCor.getText()); carro.setPlaca(tfPlaca.getText());
-		 * carro.setAno(Integer.parseInt(tfAno.getText()));
-		 * carro.setDisponivel(ckbDisponivel.isSelected());
-		 */
 	}
 
 	void populaTela(Carro carro) {

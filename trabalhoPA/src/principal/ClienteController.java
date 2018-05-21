@@ -72,7 +72,7 @@ public class ClienteController {
 	private void initialize() {
 		tbcCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
 		tbcNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-		tbcDataCadastro.setCellValueFactory(new PropertyValueFactory<>("dataCadastro"));
+		tbcDataCadastro.setCellValueFactory(new PropertyValueFactory<>("dataDeCadastro"));
 
 		novoCliente();
 	}

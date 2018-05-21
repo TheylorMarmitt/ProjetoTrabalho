@@ -14,7 +14,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import principal.dao.AluguelArquivo;
 import principal.dao.AluguelDAO;
+import principal.dao.CarroArquivo;
+import principal.dao.CarroDAO;
 import principal.model.Aluguel;
+import principal.model.Carro;
 
 public class DevolucaoController {
 
@@ -45,6 +48,9 @@ public class DevolucaoController {
 	    Aluguel aluguel;
 	    private AluguelDAO aluguelDao = new AluguelArquivo();
 	    boolean editando;
+	    
+	    private CarroDAO carroDao = new CarroArquivo();
+	    
 
 	    @FXML
 		private void initialize() {
@@ -59,8 +65,15 @@ public class DevolucaoController {
 	    @FXML
 	    void devolver(ActionEvent event) {
 	    		aluguel.setDataDevolucao(LocalDate.now());
+	    		for(Carro carro : carroDao.listar()){
+	    			if(carro.equals(aluguel.getCarro())) {
+	    				carro.setDisponivel(true);
+	    				carroDao.alterar(carro);
+	    			}
+	    		}
 	    		aluguelDao.excluir(aluguel);
-	    		Double valorTotal = (Double.parseDouble(tfValorTaxa.getText())) + aluguel.getCarro().getValor() ;
+	    		//Double valorTotal = (Double.parseDouble(tfValorTaxa.getText())) + aluguel.getCarro().getValor() ;
+	    		Double valorTotal = (Double.parseDouble(tfValorTaxa.getText()) * aluguel.diasLocacao()) + aluguel.getCarro().getValor() ;
 	    		LblValorTotal.setText(valorTotal.toString());
 
 	    }
@@ -78,5 +91,7 @@ public class DevolucaoController {
 				editando = true;
 			}
 	    }
+	    
+	    
 	
 }
