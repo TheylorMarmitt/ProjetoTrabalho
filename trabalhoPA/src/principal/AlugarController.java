@@ -60,11 +60,14 @@ public class AlugarController {
     private Label lblMensagem;
     
     Aluguel aluguel;
+    
     private AluguelDAO aluguelDao = new AluguelArquivo();
     private CarroDAO carroDao = new CarroArquivo();
     private VendedorDAO vendedorDao = new VendedorArquivo();
     private FilialDAO filialDao = new FilialArquivo();
     private ClienteDAO clienteDao = new ClienteArquivo();
+    
+    Cliente cliente; 
     
     
     @FXML
@@ -99,7 +102,7 @@ public class AlugarController {
     @FXML
     void selecionaCliente(MouseEvent event) {
     		if (tblCliente.getSelectionModel().getSelectedItem() != null) {
-    			aluguel.setCliente(tblCliente.getSelectionModel().getSelectedItem());
+    			cliente = tblCliente.getSelectionModel().getSelectedItem();
     		}
     }
     
@@ -130,6 +133,7 @@ public class AlugarController {
     				.setVendedor(cbVendedor.getValue())
     				.setDataAluguel(LocalDate.now())
     				.setDataDevolucao(null)
+    				.setCliente(cliente)
     				.getAluguel();
     		/**
     		aluguel.setCodigo(Integer.parseInt(tfCodigo.getText()));

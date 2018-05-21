@@ -16,6 +16,11 @@ public class AluguelBuilder {
 		return this;
 	}
 	
+	public AluguelBuilder setCliente(Cliente cliente) {
+		aluguel.setCliente(cliente);
+		return this;
+	}
+	
 	public AluguelBuilder setFilial(Filial filial) {
 		aluguel.setFilial(filial);
 		return this;
