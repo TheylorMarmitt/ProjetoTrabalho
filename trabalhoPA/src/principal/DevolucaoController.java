@@ -11,6 +11,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import principal.dao.AluguelArquivo;
 import principal.dao.AluguelDAO;
 import principal.model.Aluguel;
@@ -57,8 +58,8 @@ public class DevolucaoController {
 	    
 	    @FXML
 	    void devolver(ActionEvent event) {
-	    		aluguelDao.excluir(aluguel);
 	    		aluguel.setDataDevolucao(LocalDate.now());
+	    		aluguelDao.excluir(aluguel);
 	    		Double valorTotal = (Double.parseDouble(tfValorTaxa.getText())) + aluguel.getCarro().getValor() ;
 	    		LblValorTotal.setText(valorTotal.toString());
 
@@ -67,6 +68,15 @@ public class DevolucaoController {
 	    void novoAluguel() {
 	    		aluguel = new Aluguel();
 	    		tblAlugados.setItems(FXCollections.observableArrayList(aluguelDao.listar()));
+	    }
+	    
+
+	    @FXML
+	    void selecionaAlugado(MouseEvent event) {
+			if (tblAlugados.getSelectionModel().getSelectedItem() != null) {
+				aluguel = tblAlugados.getSelectionModel().getSelectedItem();
+				editando = true;
+			}
 	    }
 	
 }

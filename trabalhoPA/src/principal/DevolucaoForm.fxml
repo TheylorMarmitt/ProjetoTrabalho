@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.DevolucaoController">
    <children>
             <Label layoutX="84.0" layoutY="102.0" text="Aluguel: " />
-            <TableView fx:id="tblAlugados" layoutX="172.0" layoutY="102.0" prefHeight="200.0" prefWidth="468.0">
+            <TableView fx:id="tblAlugados" layoutX="172.0" layoutY="102.0" onMouseClicked="#selecionaAlugado" prefHeight="200.0" prefWidth="468.0">
               <columns>
                 <TableColumn fx:id="tbcCodigo" prefWidth="57.0" text="Codigo" />
                 <TableColumn fx:id="tbcCarro" prefWidth="128.0" text="Carro" />
