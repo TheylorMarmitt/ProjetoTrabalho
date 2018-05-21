@@ -29,7 +29,7 @@ public class DevolucaoController {
 	    @FXML
 	    private TableColumn<Aluguel, String> tbcCliente;
 	    
-	    @FXML
+	    @FXML // adicional
 	    private TableColumn<Aluguel, LocalDate> tbcDataLocacao;
 	     
 	    @FXML

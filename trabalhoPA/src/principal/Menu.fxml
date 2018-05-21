@@ -24,7 +24,7 @@
               <MenuItem fx:id="mnuCadastroFilial" mnemonicParsing="false" onAction="#cadastrarFilial" text="Filial" />
                   <MenuItem fx:id="mnuCadastroCliente" mnemonicParsing="false" onAction="#cadastrarCliente" text="Cliente" />
                   <MenuItem fx:id="mnuCadastroVendedor" mnemonicParsing="false" onAction="#cadastrarVendedor" text="Vendedor" />
-                  <MenuItem fx:id="cadastroCarro" mnemonicParsing="false" onAction="#cadastrarCarro" text="Carro" />
+                  <MenuItem fx:id="mnuCadastroCarro" mnemonicParsing="false" onAction="#cadastrarCarro" text="Carro" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Alugar">

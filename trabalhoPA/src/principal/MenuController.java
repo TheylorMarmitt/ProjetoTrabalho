@@ -24,7 +24,7 @@ public class MenuController {
     private MenuItem mnuCadastroVendedor;
     
     @FXML
-    private MenuItem cadastroCarro;
+    private MenuItem mnuCadastroCarro;
     
     @FXML
     private MenuItem mnuAlugar;
