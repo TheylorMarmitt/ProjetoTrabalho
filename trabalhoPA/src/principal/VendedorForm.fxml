@@ -15,21 +15,21 @@
       <Label layoutX="308.0" layoutY="292.0" text="CPF:" />
       <Label layoutX="301.0" layoutY="320.0" text="Email:" />
       <Label layoutX="259.0" layoutY="358.0" text="Data de nascimento: " />
+      <TextField fx:id="tfCodigo" layoutX="346.0" layoutY="188.0" />
       <TextField fx:id="tfNome" layoutX="344.0" layoutY="226.0" prefHeight="27.0" prefWidth="336.0" />
       <TextField fx:id="tfTelefone" layoutX="344.0" layoutY="257.0" prefHeight="27.0" prefWidth="228.0" />
       <TextField fx:id="tfCPF" layoutX="344.0" layoutY="287.0" prefHeight="27.0" prefWidth="228.0" />
       <TextField fx:id="tfEmail" layoutX="344.0" layoutY="315.0" prefHeight="27.0" prefWidth="336.0" />
       <DatePicker fx:id="dtNascimento" layoutX="391.0" layoutY="353.0" />
+      <Button fx:id="btnAdicionar" layoutX="391.0" layoutY="396.0" mnemonicParsing="false" onAction="#adicionarVendedor" text="Adicionar" />
+      <Button fx:id="btnRemover" layoutX="488.0" layoutY="396.0" mnemonicParsing="false" onAction="#removerVendedor" text="Remover" />
+      <Button fx:id="btnEditar" layoutX="578.0" layoutY="396.0" mnemonicParsing="false" onAction="#editaVendedor" text="Novo" />
       <TableView fx:id="tblVendedor" layoutX="229.0" layoutY="434.0" onMouseClicked="#selecionaVendedor" prefHeight="200.0" prefWidth="575.0">
          <columns>
             <TableColumn fx:id="tbcCodigo" prefWidth="75.0" text="Codigo" />
             <TableColumn fx:id="tbcNome" prefWidth="495.0" text="Nome" />
          </columns>
       </TableView>
-      <Button fx:id="btnAdicionar" layoutX="391.0" layoutY="396.0" mnemonicParsing="false" onAction="#adicionarVendedor" text="Adicionar" />
-      <Button fx:id="btnRemover" layoutX="488.0" layoutY="396.0" mnemonicParsing="false" onAction="#removerVendedor" text="Remover" />
-      <Button fx:id="btnEditar" layoutX="578.0" layoutY="396.0" mnemonicParsing="false" onAction="#editaVendedor" text="Novo" />
       <Label layoutX="296.0" layoutY="193.0" text="Codigo:" />
-      <TextField fx:id="tfCodigo" layoutX="346.0" layoutY="188.0" />
    </children>
 </AnchorPane>

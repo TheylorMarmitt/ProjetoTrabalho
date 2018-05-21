@@ -33,10 +33,10 @@
             <TableColumn fx:id="tbcDisponivel" prefWidth="79.0" text="Disponível" />
          </columns>
       </TableView>
-      <Label layoutX="151.0" layoutY="196.0" prefHeight="22.0" prefWidth="44.0" text="Modelo" />
+      <Label layoutX="151.0" layoutY="196.0" prefHeight="22.0" prefWidth="51.0" text="Modelo" />
       <Label layoutX="159.0" layoutY="93.0" text="Código" />
       <Label layoutX="159.0" layoutY="135.0" text="Marca" />
-      <Label layoutX="159.0" layoutY="168.0" text="Valor" />
+      <Label layoutX="98.0" layoutY="168.0" text="Valor do aluguel" />
       <Label layoutX="377.0" layoutY="93.0" text="Cor" />
       <Label layoutX="376.0" layoutY="127.0" text="Placa" />
       <Label layoutX="376.0" layoutY="160.0" text="Ano" />

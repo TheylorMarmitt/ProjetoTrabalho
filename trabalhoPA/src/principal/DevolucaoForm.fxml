@@ -18,9 +18,9 @@
                   <TableColumn fx:id="tbcDataLocacao" prefWidth="139.0" text="Data Locacão" />
               </columns>
             </TableView>
+            <TextField fx:id="tfValorTaxa" layoutX="264.0" layoutY="339.0" prefHeight="27.0" prefWidth="127.0" />
             <Button fx:id="btnDevolucao" layoutX="506.0" layoutY="339.0" mnemonicParsing="false" onAction="#devolver" text="Realizar devolução" />
             <Label fx:id="LblValorTotal" layoutX="374.0" layoutY="405.0" text="Valor Total" />
             <Label layoutX="172.0" layoutY="344.0" text="Valor da Taxa: " />
-            <TextField fx:id="tfValorTaxa" layoutX="264.0" layoutY="339.0" prefHeight="27.0" prefWidth="127.0" />
    </children>
 </AnchorPane>

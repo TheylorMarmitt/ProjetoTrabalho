@@ -26,7 +26,6 @@
       <Button fx:id="btnSalvar" layoutX="100.0" layoutY="258.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
       <Button fx:id="btnNovo" layoutX="186.0" layoutY="258.0" mnemonicParsing="false" onAction="#novo" text="Novo" />
       <Button fx:id="btnExcluir" layoutX="268.0" layoutY="258.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
-      <Label layoutX="116.0" layoutY="200.0" prefHeight="17.0" prefWidth="39.0" text="CNPJ:" />
       <TableView fx:id="tblFilial" layoutX="15.0" layoutY="336.0" onMouseClicked="#selecionaFilial" prefHeight="191.0" prefWidth="710.0">
          <columns>
             <TableColumn fx:id="tbcCodigo" prefWidth="109.21310424804688" text="Codigo" />
@@ -36,5 +35,6 @@
             <TableColumn fx:id="tbcCnpj" prefWidth="185.0" text="CNPJ" />
          </columns>
       </TableView>
+      <Label layoutX="116.0" layoutY="200.0" prefHeight="17.0" prefWidth="39.0" text="CNPJ:" />
    </children>
 </AnchorPane>
