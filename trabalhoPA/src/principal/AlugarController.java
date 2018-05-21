@@ -135,14 +135,6 @@ public class AlugarController {
     				.setDataDevolucao(null)
     				.setCliente(cliente)
     				.getAluguel();
-    		/**
-    		aluguel.setCodigo(Integer.parseInt(tfCodigo.getText()));
-    		aluguel.setCarro(cbcarro.getValue());
-    		aluguel.setFilial(cbFilial.getValue());
-    		aluguel.setVendedor(cbVendedor.getValue());
-    		aluguel.setDataAluguel(LocalDate.now());
-    		aluguel.setDataDevolucao(null);
-    		*/
     }
     
     void novoAluguel(){

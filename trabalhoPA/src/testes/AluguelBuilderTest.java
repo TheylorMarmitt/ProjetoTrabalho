@@ -41,6 +41,9 @@ public class AluguelBuilderTest {
 		a.setVendedor(v);
 		assertEquals(v, a.getAluguel().getVendedor());
 		
+		a.setCliente(cl);
+		assertEquals(cl, a.getAluguel().getCliente());
+		
 		
 	}
 }
