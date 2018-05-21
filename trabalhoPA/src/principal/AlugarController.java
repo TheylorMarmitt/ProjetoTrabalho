@@ -118,7 +118,7 @@ public class AlugarController {
     			lblMensagem.setText("Aluguel realizado com Sucesso");
     			aluguelDao.inserir(aluguel);
     			aluguel.getCarro().setDisponivel(false);
-    			carroDao.inserir(aluguel.getCarro());
+    			carroDao.alterar(aluguel.getCarro());
     		}
     		novoAluguel();
     		

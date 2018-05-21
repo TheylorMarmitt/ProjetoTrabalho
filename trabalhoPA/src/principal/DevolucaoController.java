@@ -72,7 +72,6 @@ public class DevolucaoController {
 	    			}
 	    		}
 	    		aluguelDao.excluir(aluguel);
-	    		//Double valorTotal = (Double.parseDouble(tfValorTaxa.getText())) + aluguel.getCarro().getValor() ;
 	    		Double valorTotal = (Double.parseDouble(tfValorTaxa.getText()) * aluguel.diasLocacao()) + aluguel.getCarro().getValor() ;
 	    		LblValorTotal.setText(valorTotal.toString());
 
