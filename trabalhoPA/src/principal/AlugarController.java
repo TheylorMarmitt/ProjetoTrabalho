@@ -107,7 +107,7 @@ public class AlugarController {
     }
     
     @FXML
-    void Alugar(ActionEvent event) throws Exception{
+    void Alugar(ActionEvent event){
     		populaAluguel();
 
     		if(aluguel.getCarro() == null || aluguel.getCodigo() == null) {
