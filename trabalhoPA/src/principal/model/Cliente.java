@@ -104,8 +104,8 @@ public class Cliente implements Serializable {
 		this.cnh = cnh;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+//	public static long getSerialversionuid() {
+//		return serialVersionUID;
+//	}
 
 }

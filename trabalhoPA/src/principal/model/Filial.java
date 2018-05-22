@@ -70,8 +70,8 @@ public class Filial implements Serializable {
 		this.cnpj = cnpj;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+//	public static long getSerialversionuid() {
+//		return serialVersionUID;
+//	}
 
 }

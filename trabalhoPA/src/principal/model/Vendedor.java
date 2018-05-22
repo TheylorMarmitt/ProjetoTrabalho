@@ -83,8 +83,8 @@ public class Vendedor implements Serializable {
 		this.email = email;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+//	public static long getSerialversionuid() {
+//		return serialVersionUID;
+//	}
 
 }

@@ -109,7 +109,7 @@ public class AlugarController {
     @FXML
     void Alugar(ActionEvent event) throws Exception{
     		populaAluguel();
- 
+
     		if(aluguel.getCarro() == null || aluguel.getCodigo() == null) {
     			lblMensagem.setText("Erro de aluguel. Campos em falta");
     		}else if(aluguel.getCarro().getDisponivel() == false){

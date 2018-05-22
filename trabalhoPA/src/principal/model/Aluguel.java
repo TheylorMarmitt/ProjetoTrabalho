@@ -39,9 +39,10 @@ public class Aluguel implements Serializable {
 	}
 
 	public Integer diasLocacao() {
-		long dias;
-		dias = ChronoUnit.DAYS.between(this.dataAluguel, this.dataDevolucao);
-		return (int) dias;
+		Integer dias;
+		dias = (int) ChronoUnit.DAYS.between(this.dataAluguel, this.dataDevolucao);
+		dias = dias+1;
+		return Integer.valueOf(dias);
 	}
 
 	public Integer getCodigo() {
@@ -100,8 +101,9 @@ public class Aluguel implements Serializable {
 		this.filial = filial;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+//	
+//	public static long getSerialversionuid() {
+//		return serialVersionUID;
+//	}
 
 }

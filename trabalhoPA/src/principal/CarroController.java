@@ -72,7 +72,6 @@ public class CarroController {
 
 	@FXML
 	private void initialize() {
-		// Inicializa a tabela de carro com duas colunas.
 		tbcCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
 		tbcAno.setCellValueFactory(new PropertyValueFactory<>("ano"));
 		tbcMarca.setCellValueFactory(new PropertyValueFactory<>("marca"));

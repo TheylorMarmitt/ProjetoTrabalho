@@ -104,7 +104,7 @@ public class Carro implements Serializable {
 		this.disponivel = disponivel;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+//	public static long getSerialversionuid() {
+//		return serialVersionUID;
+//	}
 }

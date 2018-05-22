@@ -111,17 +111,7 @@ public class ClienteController {
     				.setDataNascimento(dtNascimento.getValue())
     				.setDataDeCadastro(LocalDate.now())
     				.getCliente();
-    		
-    		/**		
-    		cliente.setCodigo(Integer.valueOf((tfCodigo.getText())));
-    		cliente.setNome(tfNome.getText());
-    		cliente.setEmail(tfEmail.getText());
-    		cliente.setTelefone(tfTelefone.getText());
-    		cliente.setCpf(tfCPF.getText());
-    		cliente.setCnh(tfCNH.getText());
-    		cliente.setDataNascimento(dtNascimento.getValue());
-    		cliente.setDataDeCadastro(LocalDate.now());
-    		*/
+
     }
     
     public void populaTela(Cliente cliente) {
