@@ -47,7 +47,6 @@ public class DevolucaoController {
 	    
 	    Aluguel aluguel;
 	    private AluguelDAO aluguelDao = new AluguelArquivo();
-	    boolean editando;
 	    
 	    private CarroDAO carroDao = new CarroArquivo();
 	    
@@ -87,7 +86,6 @@ public class DevolucaoController {
 	    void selecionaAlugado(MouseEvent event) {
 			if (tblAlugados.getSelectionModel().getSelectedItem() != null) {
 				aluguel = tblAlugados.getSelectionModel().getSelectedItem();
-				editando = true;
 			}
 	    }
 	    

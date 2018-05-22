@@ -8,28 +8,28 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.VendedorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #104e8b;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.VendedorController">
    <children>
-      <Label layoutX="299.0" layoutY="231.0" text="Nome:" />
-      <Label layoutX="282.0" layoutY="262.0" text="Telefone: " />
-      <Label layoutX="308.0" layoutY="292.0" text="CPF:" />
-      <Label layoutX="301.0" layoutY="320.0" text="Email:" />
-      <Label layoutX="259.0" layoutY="358.0" text="Data de nascimento: " />
-      <TextField fx:id="tfCodigo" layoutX="346.0" layoutY="188.0" />
-      <TextField fx:id="tfNome" layoutX="344.0" layoutY="226.0" prefHeight="27.0" prefWidth="336.0" />
-      <TextField fx:id="tfTelefone" layoutX="344.0" layoutY="257.0" prefHeight="27.0" prefWidth="228.0" />
-      <TextField fx:id="tfCPF" layoutX="344.0" layoutY="287.0" prefHeight="27.0" prefWidth="228.0" />
-      <TextField fx:id="tfEmail" layoutX="344.0" layoutY="315.0" prefHeight="27.0" prefWidth="336.0" />
-      <DatePicker fx:id="dtNascimento" layoutX="391.0" layoutY="353.0" />
-      <Button fx:id="btnAdicionar" layoutX="391.0" layoutY="396.0" mnemonicParsing="false" onAction="#adicionarVendedor" text="Adicionar" />
-      <Button fx:id="btnRemover" layoutX="488.0" layoutY="396.0" mnemonicParsing="false" onAction="#removerVendedor" text="Remover" />
-      <Button fx:id="btnEditar" layoutX="578.0" layoutY="396.0" mnemonicParsing="false" onAction="#editaVendedor" text="Novo" />
-      <TableView fx:id="tblVendedor" layoutX="229.0" layoutY="434.0" onMouseClicked="#selecionaVendedor" prefHeight="200.0" prefWidth="575.0">
+      <Label layoutX="75.0" layoutY="53.0" text="Nome:" textFill="WHITE" />
+      <Label layoutX="58.0" layoutY="84.0" text="Telefone: " textFill="WHITE" />
+      <Label layoutX="84.0" layoutY="114.0" text="CPF:" textFill="WHITE" />
+      <Label layoutX="77.0" layoutY="142.0" text="Email:" textFill="WHITE" />
+      <Label layoutX="35.0" layoutY="180.0" text="Data de nascimento: " textFill="WHITE" />
+      <TextField fx:id="tfCodigo" layoutX="122.0" layoutY="10.0" />
+      <TextField fx:id="tfNome" layoutX="120.0" layoutY="48.0" prefHeight="27.0" prefWidth="336.0" />
+      <TextField fx:id="tfTelefone" layoutX="120.0" layoutY="79.0" prefHeight="27.0" prefWidth="228.0" />
+      <TextField fx:id="tfCPF" layoutX="120.0" layoutY="109.0" prefHeight="27.0" prefWidth="228.0" />
+      <TextField fx:id="tfEmail" layoutX="120.0" layoutY="137.0" prefHeight="27.0" prefWidth="336.0" />
+      <DatePicker fx:id="dtNascimento" layoutX="167.0" layoutY="175.0" />
+      <Button fx:id="btnAdicionar" layoutX="167.0" layoutY="218.0" mnemonicParsing="false" onAction="#adicionarVendedor" text="Adicionar" />
+      <Button fx:id="btnRemover" layoutX="264.0" layoutY="218.0" mnemonicParsing="false" onAction="#removerVendedor" text="Remover" />
+      <Button fx:id="btnEditar" layoutX="354.0" layoutY="218.0" mnemonicParsing="false" onAction="#editaVendedor" text="Novo" />
+      <TableView fx:id="tblVendedor" layoutX="5.0" layoutY="256.0" onMouseClicked="#selecionaVendedor" prefHeight="200.0" prefWidth="575.0">
          <columns>
             <TableColumn fx:id="tbcCodigo" prefWidth="75.0" text="Codigo" />
             <TableColumn fx:id="tbcNome" prefWidth="495.0" text="Nome" />
          </columns>
       </TableView>
-      <Label layoutX="296.0" layoutY="193.0" text="Codigo:" />
+      <Label layoutX="72.0" layoutY="15.0" text="Codigo:" textFill="WHITE" />
    </children>
 </AnchorPane>

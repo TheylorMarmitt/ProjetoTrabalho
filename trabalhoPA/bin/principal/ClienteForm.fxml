@@ -8,31 +8,31 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.ClienteController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #104E8B;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.ClienteController">
    <children>
-      <Label layoutX="177.0" layoutY="187.0" text="Nome: " />
-      <Label layoutX="188.0" layoutY="218.0" text="CPF: " />
-      <Label layoutX="180.0" layoutY="250.0" text="Email:" />
-      <Label layoutX="184.0" layoutY="309.0" text="CNH:" />
-      <Label layoutX="159.0" layoutY="278.0" text="Telefone:" />
-      <Label layoutX="459.0" layoutY="323.0" text="Data Nascimento:" />
-      <TextField fx:id="tfCodigo" layoutX="225.0" layoutY="151.0" prefHeight="27.0" prefWidth="109.0" />
-      <TextField fx:id="tfNome" layoutX="225.0" layoutY="182.0" prefHeight="27.0" prefWidth="292.0" />
-      <TextField fx:id="tfCPF" layoutX="225.0" layoutY="212.0" prefHeight="27.0" prefWidth="172.0" />
-      <TextField fx:id="tfEmail" layoutX="226.0" layoutY="243.0" prefHeight="27.0" prefWidth="344.0" />
-      <TextField fx:id="tfTelefone" layoutX="226.0" layoutY="274.0" prefHeight="27.0" prefWidth="172.0" />
-      <TextField fx:id="tfCNH" layoutX="227.0" layoutY="304.0" prefHeight="27.0" prefWidth="172.0" />
-      <DatePicker fx:id="dtNascimento" layoutX="575.0" layoutY="317.0" />
-      <Button fx:id="btnSalvar" layoutX="240.0" layoutY="358.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
-      <Button fx:id="btnNovo" layoutX="313.0" layoutY="358.0" mnemonicParsing="false" onAction="#novo" text="Novo" />
-      <Button fx:id="btnExcluir" layoutX="382.0" layoutY="358.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
-      <TableView fx:id="tblCliente" layoutX="126.0" layoutY="398.0" onMouseClicked="#selecionaCliente" prefHeight="191.0" prefWidth="665.0">
+      <Label layoutX="53.0" layoutY="53.0" text="Nome: " textFill="WHITE" />
+      <Label layoutX="64.0" layoutY="84.0" text="CPF: " textFill="WHITE" />
+      <Label layoutX="56.0" layoutY="116.0" text="Email:" textFill="WHITE" />
+      <Label layoutX="60.0" layoutY="175.0" text="CNH:" textFill="WHITE" />
+      <Label layoutX="35.0" layoutY="144.0" text="Telefone:" textFill="WHITE" />
+      <Label layoutX="335.0" layoutY="189.0" text="Data Nascimento:" textFill="WHITE" />
+      <TextField fx:id="tfCodigo" layoutX="101.0" layoutY="17.0" prefHeight="27.0" prefWidth="109.0" />
+      <TextField fx:id="tfNome" layoutX="101.0" layoutY="48.0" prefHeight="27.0" prefWidth="292.0" />
+      <TextField fx:id="tfCPF" layoutX="101.0" layoutY="78.0" prefHeight="27.0" prefWidth="172.0" />
+      <TextField fx:id="tfEmail" layoutX="102.0" layoutY="109.0" prefHeight="27.0" prefWidth="344.0" />
+      <TextField fx:id="tfTelefone" layoutX="102.0" layoutY="140.0" prefHeight="27.0" prefWidth="172.0" />
+      <TextField fx:id="tfCNH" layoutX="103.0" layoutY="170.0" prefHeight="27.0" prefWidth="172.0" />
+      <DatePicker fx:id="dtNascimento" layoutX="451.0" layoutY="183.0" />
+      <Button fx:id="btnSalvar" layoutX="116.0" layoutY="224.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+      <Button fx:id="btnNovo" layoutX="189.0" layoutY="224.0" mnemonicParsing="false" onAction="#novo" text="Novo" />
+      <Button fx:id="btnExcluir" layoutX="258.0" layoutY="224.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
+      <TableView fx:id="tblCliente" layoutX="2.0" layoutY="264.0" onMouseClicked="#selecionaCliente" prefHeight="191.0" prefWidth="665.0">
          <columns>
             <TableColumn fx:id="tbcCodigo" prefWidth="109.21310424804688" text="Codigo" />
             <TableColumn fx:id="tbcNome" prefWidth="383.7868957519531" text="Nome" />
             <TableColumn fx:id="tbcDataCadastro" prefWidth="172.9857177734375" text="Data de Cadastro" />
          </columns>
       </TableView>
-      <Label layoutX="169.0" layoutY="156.0" text="Código:" />
+      <Label layoutX="45.0" layoutY="22.0" text="Código:" textFill="WHITE" />
    </children>
 </AnchorPane>
