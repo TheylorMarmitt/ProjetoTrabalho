@@ -103,14 +103,7 @@ public class VendedorController {
     				.setEmail(tfEmail.getText())
     				.setDataNascimento(dtNascimento.getValue())
     				.getVendedor();
-    		/**
-    		vendedor.setCodigo(Integer.parseInt(tfCodigo.getText()));
-    		vendedor.setNome(tfNome.getText());
-    		vendedor.setTelefone(tfTelefone.getText());
-    		vendedor.setCpf(tfCPF.getText());
-    		vendedor.setEmail(tfEmail.getText());
-    		vendedor.setDataNascimento(dtNascimento.getValue());
-    		*/
+
     }
     
     public void populaTela(Vendedor vendedor) {
