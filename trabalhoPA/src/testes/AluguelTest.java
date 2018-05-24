@@ -43,7 +43,7 @@ public class AluguelTest {
 		assertEquals(cl, a1.getCliente());
 		assertEquals(v, a1.getVendedor());
 		
-		assertEquals(Integer.valueOf(0), a1.diasLocacao());
+		assertEquals(Integer.valueOf(1), a1.diasLocacao());
 		
 	}
 
