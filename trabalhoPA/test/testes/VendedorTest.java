@@ -1,6 +1,8 @@
 package testes;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDate;
 
@@ -48,12 +50,15 @@ public class VendedorTest {
 		v1.setEmail("email@email.com");
 		assertEquals("email@email.com", v1.getEmail());
 		
-			
+		assertEquals(v, v1);	
+		
+		assertTrue(v.hashCode() == v1.hashCode());
 				
+		v1.setCodigo(2);
 		
-		
-		
-		
+		assertFalse(v.equals(v1));
+		assertFalse(v.hashCode() == v1.hashCode());
+		assertFalse(v.equals("STRING"));
 		
 	}
 	

@@ -2,6 +2,9 @@ package principal.model;
 
 import java.io.Serializable;
 
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode(of = "codigo")
 public class Filial implements Serializable {
 
 	private static final long serialVersionUID = -6911788269286949660L;
@@ -9,7 +12,7 @@ public class Filial implements Serializable {
 	private String nome;
 	private String cidade;
 	private String uf;
-	private String cnpj; // nao pode ser int, cnpj tem 14 caracteres numericos, int so permite ate 9
+	private String cnpj;
 
 	public Filial() {
 		super();
@@ -69,9 +72,5 @@ public class Filial implements Serializable {
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
-
-//	public static long getSerialversionuid() {
-//		return serialVersionUID;
-//	}
 
 }

@@ -1,6 +1,8 @@
 package testes;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDate;
 
@@ -44,6 +46,16 @@ public class AluguelTest {
 		assertEquals(v, a1.getVendedor());
 		
 		assertEquals(Integer.valueOf(1), a1.diasLocacao());
+		
+		assertEquals(a, a1);	
+		
+		assertTrue(a.hashCode() == a1.hashCode());
+				
+		a1.setCodigo(2);
+	
+		assertFalse(v.equals(a1));
+		assertFalse(v.hashCode() == a1.hashCode());
+		assertFalse(v.equals("STRING"));
 		
 	}
 

@@ -1,6 +1,8 @@
 package testes;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDate;
 
@@ -36,6 +38,15 @@ public class ClienteTest {
 		c1.setEmail("email@email.com");
 		c1.setCnh("12345");
 		
+		assertEquals(c, c1);	
+		
+		assertTrue(c.hashCode() == c1.hashCode());
+				
+		c1.setCodigo(2);
+		
+		assertFalse(c.equals(c1));
+		assertFalse(c.hashCode() == c1.hashCode());
+		assertFalse(c.equals("STRING"));
 		
 	}
 	

@@ -1,6 +1,8 @@
 package testes;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -47,6 +49,16 @@ public class CarroTest {
 		
 		c1.setDisponivel(true);
 		assertEquals(true, c1.getDisponivel());
+		
+		assertEquals(c, c1);	
+		
+		assertTrue(c.hashCode() == c1.hashCode());
+				
+		c1.setCodigo(2);
+		
+		assertFalse(c.equals(c1));
+		assertFalse(c.hashCode() == c1.hashCode());
+		assertFalse(c.equals("STRING"));
 		
 	}
 	
